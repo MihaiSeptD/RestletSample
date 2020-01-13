@@ -1,13 +1,16 @@
 package services;
 
-import org.apache.log4j.Logger;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.restlet.Application;
 import org.restlet.Restlet;
 import org.restlet.routing.Router;
 
 public class FibonacciApplication extends Application {
 
-	private static final Logger LOG = Logger.getLogger(FibonacciApplication.class);
+	private static final Logger LOG = LogManager.getLogger(FibonacciApplication.class);
 	
 	public synchronized Restlet createInboundRoot() {
 		

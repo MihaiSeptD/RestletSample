@@ -3,7 +3,8 @@ package services;
 import java.math.BigInteger;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.restlet.Request;
 import org.restlet.resource.Get;
 import org.restlet.resource.ServerResource;
@@ -12,7 +13,7 @@ import compute.ComputeFibonacci;
 
 public class GetFibonacciTerm extends ServerResource {
 
-	private static final Logger LOG = Logger.getLogger(GetFibonacciTerm.class);
+	private static final Logger LOG = LogManager.getLogger(GetFibonacciTerm.class);
 
 	@Get
 	public String represent() {

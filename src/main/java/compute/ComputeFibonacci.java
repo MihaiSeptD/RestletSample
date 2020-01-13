@@ -4,13 +4,14 @@ import java.math.BigInteger;
 import java.util.SortedMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ComputeFibonacci {
 
 	private static SortedMap<Integer, BigInteger> hashValues = new ConcurrentSkipListMap<>();
 
-	private static final Logger LOG = Logger.getLogger(ComputeFibonacci.class);
+	private static final Logger LOG = LogManager.getLogger(ComputeFibonacci.class);
 
 	private static final int RANGE_OF_CACHE_USAGE = 30;
 
